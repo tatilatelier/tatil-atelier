@@ -1,145 +1,254 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TÁTIL Atelier de Artes Inclusivo</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: linear-gradient(180deg, #f8f8f8, #d6d0dc);
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #6d5b8c;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    header p {
-      font-size: 1rem;
-      opacity: 0.9;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      background: #eee;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      background-color: #f3f0f6;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    input, select, textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    button {
-      background-color: #6d5b8c;
-      color: white;
-      border: none;
-      padding: 0.9rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background-color: #59497b;
-    }
-    footer {
-      background-color: #6d5b8c;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TÁTIL Atelier de Artes Inclusivo</title>
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+margin:0;
+background:linear-gradient(180deg,#f8f8f8,#d6d0dc);
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:#6d5b8c;
+color:white;
+text-align:center;
+padding:3rem 1rem;
+}
+
+header h1{
+margin:0;
+font-size:2.3rem;
+}
+
+section{
+padding:2.5rem 1rem;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+color:#6d5b8c;
+}
+
+.card{
+background:white;
+padding:2rem;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+margin-bottom:2rem;
+}
+
+/* CAROUSEL */
+
+.carousel{
+position:relative;
+overflow:hidden;
+max-width:900px;
+margin:auto;
+border-radius:12px;
+}
+
+.carousel-track{
+display:flex;
+transition:transform .5s ease;
+}
+
+.carousel-track img{
+width:100%;
+flex:0 0 100%;
+}
+
+.carousel button{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.4);
+border:none;
+color:white;
+font-size:1.5rem;
+padding:10px 14px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+
+/* FORM */
+
+form{
+display:flex;
+flex-direction:column;
+gap:0.8rem;
+background:#f3f0f6;
+padding:2rem;
+border-radius:12px;
+}
+
+input,select,textarea{
+padding:.8rem;
+border:1px solid #ccc;
+border-radius:8px;
+font-family:inherit;
+}
+
+button.submit{
+background:#6d5b8c;
+color:white;
+border:none;
+padding:1rem;
+border-radius:8px;
+font-size:1rem;
+cursor:pointer;
+}
+
+button.submit:hover{
+background:#574574;
+}
+
+footer{
+background:#6d5b8c;
+color:white;
+text-align:center;
+padding:1rem;
+margin-top:40px;
+}
+
+</style>
+
 </head>
+
 <body>
-  <header>
-    <h1>TÁTIL Atelier de Artes Inclusivo</h1>
-    <p>Espaço de criação artística e inclusão para pessoas com autismo<br>
-    Rua de Xabregas 20, Escritório 3.15 — Lisboa</p>
-  </header>
 
-  <section>
-    <h2>Sobre o Atelier</h2>
-    <p>O TÁTIL Atelier é um espaço dedicado à prática artística inclusiva, promovendo experiências de expressão e autonomia através da arte. Trabalhamos com jovens e adultos no espectro do autismo, criando um ambiente criativo e acolhedor para criação artística.</p>
-  </section>
+<header>
+<h1>TÁTIL Atelier de Artes Inclusivo</h1>
 
- <section>
-  <h2>Galeria</h2>
+<p>
+Espaço de criação artística e inclusão para pessoas com autismo<br>
+Rua de Xabregas 20, Escritório 3.15 — Lisboa
+</p>
 
-  <div class="carousel">
-    <button class="prev">&#10094;</button>
+</header>
 
-    <div class="carousel-images">
-      <img src="imagens/obra1.jpg" alt="Obra 1">
-      <img src="imagens/obra2.jpg" alt="Obra 2">
-      <img src="imagens/obra3.jpg" alt="Obra 3">
-      <img src="imagens/obra4.jpg" alt="Obra 4">
-    </div>
+<section class="card">
 
-    <button class="next">&#10095;</button>
-  </div>
+<h2>Sobre o Atelier</h2>
+
+<p>
+O TÁTIL Atelier é um espaço dedicado à prática artística inclusiva,
+promovendo experiências de expressão, criação e autonomia através da arte.
+Trabalhamos com jovens e adultos no espectro do autismo, criando um ambiente
+criativo e acolhedor para o desenvolvimento de práticas artísticas.
+</p>
 
 </section>
 
-  <section>
-    <h2>Inscrições</h2>
-    <p>Preencha o formulário abaixo para se inscrever nas oficinas artísticas.</p>
+<section class="card">
 
-   <form action="https://formspree.io/f/mdkykjnb" method="POST">
-  <input type="hidden" name="_subject" value="Inscrição Oficina – TATIL Atelier">
-  <input type="hidden" name="_replyto" value="tatil.atelier@gmail.com">
+<h2>Galeria</h2>
 
-  <label>Nome completo</label>
-  <input type="text" name="nome" required>
+<div class="carousel">
 
-  <label>Email</label>
-  <input type="email" name="email" required>
+<button class="prev">&#10094;</button>
 
-  <label>Oficina</label>
-  <select name="oficina" required>
-    <option value="">Selecione uma oficina</option>
-    <option value="Tutoria Artística">Tutoria Artística</option>
-    <option value="Desenho">Desenho</option>
-    <option value="Criação de Práticas Artísticas">Criação de Práticas Artísticas</option>
-    <option value="Desenvolvimento de Competências Artísticas">Desenvolvimento de Competências Artísticas</option>
-  </select>
+<div class="carousel-track">
 
-  <label>Mensagem ou observações</label>
-  <textarea name="mensagem" rows="4"></textarea>
+<img src="imagens/obra1.jpg">
+<img src="imagens/obra2.jpg">
+<img src="imagens/obra3.jpg">
+<img src="imagens/obra4.jpg">
 
-  <button type="submit">Enviar inscrição</button>
+</div>
+
+<button class="next">&#10095;</button>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>Inscrições</h2>
+
+<p>
+Preencha o formulário para se inscrever nas oficinas artísticas.
+</p>
+
+<form action="https://formspree.io/f/mdkykjnb" method="POST">
+
+<input type="hidden" name="_subject" value="Inscrição – TÁTIL Atelier">
+
+<label>Nome</label>
+<input type="text" name="nome" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Oficina</label>
+
+<select name="oficina" required>
+
+<option value="">Selecionar</option>
+<option>Tutoria Artística</option>
+<option>Desenho</option>
+<option>Criação de Práticas Artísticas</option>
+<option>Desenvolvimento de Competências Artísticas</option>
+
+</select>
+
+<label>Mensagem</label>
+<textarea name="mensagem"></textarea>
+
+<button class="submit">Enviar inscrição</button>
+
 </form>
+
 </section>
 
-  <footer>
-    © 2025 TATIL Atelier — Todos os direitos reservados | tatil.atelier@gmail.com
-  </footer>
+<section class="card">
 
+<h2>Contacto</h2>
+
+<p><strong>Email:</strong> tatil.atelier@gmail.com</p>
+
+<p><strong>Morada:</strong> Rua de Xabregas 20, Escritório 3.15 — Lisboa</p>
+
+</section>
+
+<footer>
+
+© 2025 TÁTIL Atelier de Artes Inclusivo
+
+</footer>
+
+<script>
+
+const track=document.querySelector(".carousel-track")
+const slides=document.querySelectorAll(".carousel-track img")
+
+let index=0
+
+document.querySelector(".next").onclick=()=>{
+index++
+if(index>=slides.length) index=0
+track.style.transform="translateX(-"+index*100+"%)"
+}
+
+document.querySelector(".prev").onclick=()=>{
+index--
+if(index<0) index=slides.length-1
+track.style.transform="translateX(-"+index*100+"%)"
+}
+
+</script>
+
+</body>
+</html>
